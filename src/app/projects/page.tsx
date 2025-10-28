@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Project from "../../Components/Project";
 import Link from "next/link";
 import arrow from "../../../public/icons/icons";

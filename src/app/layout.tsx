@@ -1,4 +1,5 @@
 import "./globals.css";
+import NavBar from "../Components/navBar";
 
 export default function RootLayout({
   children,
@@ -7,7 +8,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <NavBar />
+        <div className="mt-20">{children}</div>
+      </body>
     </html>
   );
 }
