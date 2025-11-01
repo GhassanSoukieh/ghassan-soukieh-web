@@ -7,6 +7,7 @@
   --foreground: #171717;
   --orangeCustom: #ef5143;
   --beigeCustom: #fee9ce;
+  --golden: #ffb261;
 }
 
 .myFont {
@@ -15,7 +16,7 @@
   font-style: normal;
 }
 
-.tiktok-sans {
+.textFont {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -28,6 +29,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Custom breakpoint for 3xl */
+  --breakpoint-3xl: 2160px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,4 +45,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom 3xl breakpoint support */
+@media (min-width: 2160px) {
+  .text-3xl-custom {
+    font-size: 50rem;
+  }
 }

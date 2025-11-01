@@ -1,49 +1,61 @@
+"use client";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 import ghassan from "../../public/ghassan3D.png";
+import AnimateRandomChar from "../Components/AnimationRandomChar";
+
+const text =
+  "I grew up in an academic and cultured environment where technology was a natural part of everyday life. At the age of eight, I got my first computer, which became the starting point of my passion for technology. The computer quickly became my best companion, and my curiosity drove me to explore and learn everything about how it worked. Even at a young age, I began experimenting.";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center h-full py-6 text-start leading-[1] px-4 md:px-10">
-      {/* Name + Image Section */}
-      <div className="self-start flex flex-col justify-center md:flex-row items-center w-full">
-        <div className="myFont text-[80px] sm:text-[150px] md:text-[220px] xl:text-[220px] text-[var(--orangeCustom)] text-start">
-          <div>GHASSAN</div>
-          <div className="md:ml-50 lg:ml-40">SOUKIEH</div>
-          <div className="text-[var(--beigeCustom)] text-[130px]">SOFTWARE</div>
-          <div className="text-[var(--beigeCustom)] text-[130px]">ENGINEER</div>
+    <div className="flex flex-col items-center justify-center text-start leading-none ">
+      <div className="self-start flex flex-col justify-center md:flex-row items-center w-full mt-8 xl:mt-0">
+        <div className="myFont text-(--orangeCustom) text-start cursor-default text-8xl xl:text-[11rem]">
+          <AnimateRandomChar text="Ghassan" />
+          <br />
+          <span className="xl:ml-40"></span>
+          <AnimateRandomChar text="SOUKIEH" />
+
+          <br />
+          <AnimateRandomChar text="SOFTWARE" className="text-(--beigeCustom)" />
+          <br />
+          <AnimateRandomChar text="ENGINEER" className="text-(--beigeCustom)" />
         </div>
 
-        <Image
-          className="w-[120px] sm:w-[160px] md:w-[200px] lg:w-[250px] xl:w-[600px] 
-                     h-auto
-                     hover:scale-105 transition-transform duration-300"
-          src={ghassan}
-          alt="Ghassan Soukieh"
-        />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, y: 50 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+        >
+          <Image
+            className="w-148
+                       h-auto
+                       hover:scale-105 transition-transform duration-300"
+            src={ghassan}
+            alt="Ghassan Soukieh"
+          />
+        </motion.div>
       </div>
-      <div className="text-5xl tiktok-sans pt-50 text-center px-55">
-        Mitt namn är Ghassan och jag studerar till mjukvaruutvecklare, andra
-        året vid Jönköping University. Jag har bott i Nässjö med min flickvän i
-        sju år. Jag växte upp i en akademisk och kulturell miljö. Mina föräldrar
-        har alltid stöttat och motiverat mig att utvecklas och följa mina
-        drömmar. Jag vet att det kan låta lite klyschigt, men de gjorde
-        verkligen allt för att jag skulle uppnå mina ambitioner. En dag gav de
-        mig en gåva som förändrade mitt liv – en dator. Jag fick den när jag var
-        åtta år gammal, och på den tiden var en dator en lyx som inte alla hade
-        tillgång till. Jag minns fortfarande hur fascinerad och nyfiken jag var.
-        Jag älskade den datorn och spenderade otaliga timmar vid den – den blev
-        min bästa vän. Jag vet, det låter väldigt nördigt! Och jag erkänner det
-        gärna. 😄 Min kärlek till datorer växte med åren och blev mer än bara
-        att spela spel. Jag började testa olika mjukvaror och utvecklade ett
-        stort intresse för att rita och animera i 2D. På den tiden använde jag
-        ett program som hette Macromedia Flash, idag känt som Adobe Animate. Vid
-        16 års ålder kunde jag skapa riktigt roliga 2D-animationer. Efter hand
-        insåg jag att jag även hade ett stort intresse för programmering. Därför
-        sökte jag till universitetet och började studera det. Som person är jag
-        nördig, men också väldigt social. Jag gillar att lära känna nya
-        människor och att ha kul, men jag vet också när det är dags att vara
-        seriös och fokuserad.
+      <div className="w-full bg-(--orangeCustom) h-full flex flex-col myFont text-[4rem] md:text-[9rem] text-(--beigeCustom)">
+        <div className="justify-center items-center text-center flex-1 mt-20 mb-10 group cursor-pointer">
+          <span className="relative">
+            Work
+            <span className="absolute bottom-7 left-0 w-0 h-1 bg-(--beigeCustom) transition-all duration-300 group-hover:w-full"></span>
+          </span>
+        </div>
+        <div className="justify-center items-center text-center flex-1 mb-10 group cursor-pointer">
+          <span className="relative">
+            ABOUT
+            <span className="absolute bottom-7 left-0 w-0 h-1 bg-(--beigeCustom) transition-all duration-300 group-hover:w-full"></span>
+          </span>
+        </div>
+        <div className="justify-center items-center text-center flex-1 mb-10 group cursor-pointer">
+          <span className="relative">
+            CONTACT
+            <span className="absolute bottom-7 left-0 w-0 h-1 bg-(--beigeCustom) transition-all duration-300 group-hover:w-full"></span>
+          </span>
+        </div>
       </div>
     </div>
   );
