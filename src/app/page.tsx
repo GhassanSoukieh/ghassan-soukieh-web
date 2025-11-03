@@ -3,11 +3,12 @@ import Hero from "@/Components/Hero";
 import Footer from "@/Components/Footer";
 import ScrollFader from "../Components/ScrollFader";
 import Intro from "@/Components/Intro";
-
-const text =
-  "I grew up in an academic and cultured environment where technology was a natural part of everyday life. At the age of eight, I got my first computer, which became the starting point of my passion for technology. The computer quickly became my best companion, and my curiosity drove me to explore and learn everything about how it worked. Even at a young age, I began experimenting.";
+import Button from "@/Components/Button";
+import navigat from "next/navigation";
 
 export default function Home() {
+  const router = navigat.useRouter();
+
   return (
     <div className="flex flex-col items-center justify-centerleading-none ">
       <ScrollFader animationDurationDirection="Up">
@@ -15,8 +16,17 @@ export default function Home() {
       </ScrollFader>
       <ScrollFader animationDurationDirection="Down">
         <Intro />
+        <div className="flex flex-row gap-10 mt-10 mb-20 p-4">
+          <Button
+            text="See my projects"
+            onClick={() => router.push("/projects")}
+          />
+          <Button
+            text="More about me "
+            onClick={() => router.push("/projects")}
+          />
+        </div>
       </ScrollFader>
-      <Footer />
     </div>
   );
 }

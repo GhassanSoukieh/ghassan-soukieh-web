@@ -1,11 +1,8 @@
-import { div } from "framer-motion/client";
-import ScrollFader from "./ScrollFader";
-
 const Intro = () => {
   return (
-    <div className=" myFont my-50 text-8xl px20 w-[50%] text-(--beigeCustom) cursor-default">
-      "I always loved everything about computers, and that love took me on an
-      incredible journey."
+    <div className=" myFont text-4xl xl:text-8xl mt-10  w-[50%] text-(--beigeCustom) cursor-default text-center ">
+      ❞I always loved everything about computers, and that love took me on an
+      incredible journey❞.
     </div>
   );
 };

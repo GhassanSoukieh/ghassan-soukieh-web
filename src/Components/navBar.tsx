@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 
 const menu = (
@@ -21,10 +20,8 @@ const menu = (
 );
 
 const NavBar = () => {
-  const itemStyle =
-    "text-4xl p-5 rounded-2xl hover:bg-orange-500/10 hover:cursor-pointer";
   return (
-    <div className="flex items-start text-center myFont gap-10 mt-4 ml-6 w-[15rem]">
+    <div className="flex items-start text-center myFont gap-10 mt-4 ml-6 w-[15rem] fixed z-999999">
       {menu}
     </div>
   );

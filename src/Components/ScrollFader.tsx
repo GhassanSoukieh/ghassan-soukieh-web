@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -50,14 +51,14 @@ const ScrollFader = ({
       scrollTrigger: {
         trigger: componentRef.current,
         start: isUp ? "top top" : "top 80%",
-        end: isUp ? "bottom top" : "center center",
+        end: isUp ? "bottom top" : "top 100%",
         scrub: 1,
-        onUpdate: (self: any) => {
+        onUpdate: (self: ScrollTrigger) => {
           console.log("Scroll progress:", self.progress);
         },
       },
     });
-  }, [componentIsVisible]);
+  }, [componentIsVisible, animationDurationDirection]);
   return (
     <div
       ref={componentRef}

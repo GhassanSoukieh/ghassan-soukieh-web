@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import ghassan from "../../public/ghassan3D.png";
@@ -5,7 +6,7 @@ import AnimateRandomChar from "../Components/AnimationRandomChar";
 
 const Hero = () => {
   return (
-    <div className="self-start flex flex-col justify-center md:flex-row items-center w-full mt-8 xl:mt-0">
+    <div className="self-start flex flex-col justify-center md:flex-row items-center w-full mt-20 xl:mt-0">
       <div className="myFont text-(--orangeCustom) text-start cursor-default text-8xl xl:text-[11rem]">
         <AnimateRandomChar text="Ghassan" />
         <br />

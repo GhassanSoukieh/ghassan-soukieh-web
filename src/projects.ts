@@ -11,25 +11,25 @@ const image_src = "/project_Images/";
 
 const projects: Project[] = [
   {
-    title: "Battle Ships (online game)",
+    title: "BATTLE SHIPS (ONLINE GAME)",
     description:
-      "A classic Battleship remake built with React and Tailwind CSS. It features a responsive grid, turn-based gameplay against a basic AI opponent, and smooth animations for hits, misses, and sunk ships. I focused on clean state management, accessibility-friendly controls, and mobile-first interactions to make it easy to play on any device.",
-    tech: ["React", "TailwindCSS", "Vite"],
+      "I developed this online multiplayer game as part of our Android Development course using Kotlin and Firebase for real-time data management. The project received a top grade and was recognized for its performance and clean architecture.",
+    tech: ["Kotlin", "Firebase", "Android"],
     image: {
-      src: `${image_src}2.jpg`,
+      src: `${image_src}battleships.png`,
     },
   },
   {
-    title: "Weather Insight",
+    title: "SAGA PRODUCTION WEBSITE",
     description:
-      "A lightweight weather dashboard that fetches real-time conditions and 7‑day forecasts using the OpenWeather API. It includes location search with debounced input, cached requests for snappy navigation, and dynamic backgrounds that reflect current conditions. The goal was smooth UX and clear information hierarchy.",
-    tech: ["Next.js", "TypeScript", "OpenWeather API"],
+      "Saga Production is a photography and videography company based in Jönköping. They needed a modern, professional website to showcase their portfolio and client projects. I had the opportunity to lead the development of the site from start to finish, ensuring it met both their visual and technical expectations.",
+    tech: ["Next.js", "TypeScript", "CMS", "Umbraco"],
     image: {
-      src: `${image_src}1.webp`,
+      src: `${image_src}sage.png`,
     },
   },
   {
-    title: "TaskFlow",
+    title: "BUDGET MANAGER FOR IPHONE",
     description:
       "A simple but thoughtful todo app that supports nested subtasks, keyboard shortcuts, and local persistence. I experimented with optimistic UI updates, drag-and-drop reordering, and filter views (Today, Upcoming, Completed) to keep the experience fast and intuitive without needing a backend.",
     tech: ["React", "TypeScript", "Zustand"],
