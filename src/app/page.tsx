@@ -1,6 +1,5 @@
 "use client";
 import Hero from "@/Components/Hero";
-import Footer from "@/Components/Footer";
 import ScrollFader from "../Components/ScrollFader";
 import Intro from "@/Components/Intro";
 import Button from "@/Components/Button";
@@ -23,7 +22,7 @@ export default function Home() {
           />
           <Button
             text="More about me "
-            onClick={() => router.push("/projects")}
+            onClick={() => router.push("/about-me")}
           />
         </div>
       </ScrollFader>

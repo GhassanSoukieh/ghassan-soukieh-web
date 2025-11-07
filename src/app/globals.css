@@ -41,7 +41,12 @@
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(15, 70, 115, 1) 100%
+  );
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }

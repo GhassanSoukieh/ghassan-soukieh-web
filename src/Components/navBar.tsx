@@ -1,29 +1,47 @@
+"use client";
 import React from "react";
-
-const menu = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className="w-10 h-12 text-[var(--pageCustom)] hover:scale-110 transition-transform duration-300 cursor-pointer"
-  >
-    <path d="M21 5H3" />
-    <path d="M15 12H3" />
-    <path d="M17 19H3" />
-  </svg>
-);
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
+  const pathname = usePathname();
+
+  const navItems = [
+    { name: "Home", href: "/" },
+    { name: "Projects", href: "/projects" },
+    { name: "About", href: "/about-me" },
+  ];
+
   return (
-    <div className="flex items-start text-center myFont gap-10 mt-4 ml-6 w-[15rem] fixed z-999999">
-      {menu}
-    </div>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="flex justify-between items-center">
+          {/* Navigation Links */}
+          <div className="flex space-x-80 justify-center items-center w-full">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`
+                  myFont text-lg transition-all duration-300 hover:scale-105 relative
+                  ${
+                    pathname === item.href
+                      ? "text-(--golden)"
+                      : "text-white hover:text-(--beigeCustom)"
+                  }
+                `}
+              >
+                {item.name}
+                {/* Active indicator */}
+                {pathname === item.href && (
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-(--golden) rounded-full"></div>
+                )}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 };
 
