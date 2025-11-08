@@ -15,9 +15,13 @@ const image_src = "/project_Images/";
 const projects: Project[] = [
   {
     title: "BUDGET MANAGER FOR IPHONE",
-    description:
-      "A simple but thoughtful todo app that supports nested subtasks, keyboard shortcuts, and local persistence. I experimented with optimistic UI updates, drag-and-drop reordering, and filter views (Today, Upcoming, Completed) to keep the experience fast and intuitive without needing a backend.",
-    tech: ["React", "TypeScript", "Zustand"],
+    description: `An intelligent expense tracker designed for iPhone.
+                This app helps you manage your finances effortlessly by tracking expenses, visualizing spending patterns through detailed charts, 
+                and organizing transactions by category. You can create an account to securely 
+                save your data online while maintaining local access for offline use and seamless syncing. Integrated with a live currency exchange API, it allows 
+                instant conversion between currencies — perfect for travelers or international users.`,
+
+    tech: ["Swift", "Firebase", "Figma", "Currency Exchange API"],
     images: [
       { src: `${image_src}3.png` },
       { src: `${image_src}2 (1).png` },
@@ -31,8 +35,11 @@ const projects: Project[] = [
     link: "budget-manager-for-iphone",
     mobilePhotos: true,
     keyFeatures: [
-      "Nested subtask management with intuitive hierarchy",
-      "Keyboard shortcuts for power users",
+      "Detailed expense tracking with category insights",
+      "Interactive charts to visualize spending habits",
+      "Secure account system with online and local data sync",
+      "Real-time currency conversion using live exchange rates",
+      "Optimized design tailored for iPhone users",
     ],
   },
   {
@@ -65,6 +72,7 @@ const projects: Project[] = [
     keyFeatures: [
       "Responsive design for optimal viewing on all devices",
       "Integration with Umbraco CMS for easy content management",
+      "Animations and interactive elements to enhance user engagement",
     ],
   },
 ];

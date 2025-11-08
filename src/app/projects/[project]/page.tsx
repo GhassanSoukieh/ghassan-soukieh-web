@@ -101,7 +101,7 @@ const ProjectPage = () => {
 
       {/*Key features ***************************************************************/}
       <ScrollFader animationDurationDirection="Down">
-        <div className="bg-black/20 rounded-2xl p-8 border border-white/10  w-full mb-10">
+        <div className="bg-black/20 rounded-2xl p-8 border border-white/10  w-full mb-40">
           <h3 className="myFont text-4xl text-(--golden) mb-4">Key Features</h3>
           <ul className="textFont text-xl space-y-3 text-(--beigeCustom)">
             {project?.keyFeatures.map((feature, index) => (
