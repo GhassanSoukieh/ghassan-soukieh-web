@@ -7,9 +7,9 @@ const NavBar = () => {
   const pathname = usePathname();
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Projects", href: "/projects" },
-    { name: "About", href: "/about-me" },
+    { name: "HOME", href: "/" },
+    { name: "PROJECTS", href: "/projects" },
+    { name: "ABOUT", href: "/about-me" },
   ];
 
   return (
@@ -17,13 +17,13 @@ const NavBar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Navigation Links */}
-          <div className="flex space-x-80 justify-center items-center w-full">
+          <div className="flex space-x-20 lg:space-x-80 justify-center items-center w-full">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 className={`
-                  myFont text-lg transition-all duration-300 hover:scale-105 relative
+                  myFont text-sm lg:text-lg transition-all duration-300 hover:scale-105 relative
                   ${
                     pathname === item.href
                       ? "text-(--golden)"

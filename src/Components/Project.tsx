@@ -12,11 +12,11 @@ const Project = () => {
         <motion.div
           key={project.title}
           className="flex flex-col rounded-3xl p-4 hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
-          initial={{ opacity: 0, y: 50, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
+          initial={{ y: 10 }}
+          animate={{ y: 0 }}
           transition={{
-            duration: 0.6,
-            delay: index * 0.3,
+            duration: 0.4,
+            delay: index * 0.1,
             ease: "easeOut",
           }}
         >

@@ -15,10 +15,11 @@ export default function Home() {
       </ScrollFader>
       <ScrollFader animationDurationDirection="Down">
         <Intro />
-        <div className="flex flex-row gap-10 mt-10 mb-20 p-4">
+        <div className="flex flex-row gap-10 mt-10 mb-20 lg:p-4 w-[30%] items-center justify-center">
           <Button
             text="See my projects"
             onClick={() => router.push("/projects")}
+            className=""
           />
           <Button
             text="More about me "

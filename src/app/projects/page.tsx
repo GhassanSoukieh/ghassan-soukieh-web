@@ -6,10 +6,10 @@ import AnimateRandomChar from "./../../Components/AnimationRandomChar";
 export default function Home() {
   return (
     <div>
-      <div className="relative text-4xl lg:text-9xl pt-10 myFont text-center pb-15">
+      <div className="relative text-6xl lg:text-9xl  myFont text-center pb-15 mt-20 lg:mt-0">
         <div className="items-center justify-center flex flex-rows px-[15%]">
           <div className="text-(--beigeCustom)">
-            <AnimateRandomChar text="My Projects" />
+            <AnimateRandomChar text="MY PROJECTS" />
           </div>
         </div>
       </div>

@@ -14,18 +14,14 @@ learn, improve, and collaborate with others.`;
 
 const aboutMe = () => {
   return (
-    <div className="flex flex-col w-[70%] mx-auto ">
+    <div className="flex flex-col lg:w-[70%] w-[50%] mx-auto mt-20 lg:mt-0 ">
       <div className="relative myFont text-9xl flex justify-center items-center py-2">
-        <Link
-          href={"/projects"}
-          className="absolute left-8 top-1/2 transform -translate-y-1/2"
-        >
-          {arrow}
-        </Link>
-        <span className="text-(--golden)">About me</span>
+        <span className="text-(--golden) text-7xl lg:text-9xl text-center text-nowrap">
+          ABOUT ME
+        </span>
       </div>
       <div className="flex flex-col justify-center items-center mt-20 space-y-12">
-        <div className="w-[40%] relative group">
+        <div className="w-[190%] lg:w-[40%] relative group">
           <div className="absolute -inset-1  rounded-full opacity-75 group-hover:opacity-100 transition duration-300"></div>
           <ScrollFader animationDurationDirection="Up">
             <Image
@@ -47,14 +43,10 @@ const aboutMe = () => {
             </div>
             <div className="bg-linear-to-r rounded-2xl p-8   text-center">
               <h3 className="myFont text-(--golden) text-8xl  mb-6">
-                {"Let's connect"}
+                {"LET'S CONNECT"}
               </h3>
-              <p className="textFont text-2xl leading-relaxed">
-                If you made it here, I think{" "}
-                <span className="text-(--beigeCustom) font-semibold">
-                  we should talk
-                </span>{" "}
-                ✨
+              <p className="textFont text-3xl leading-relaxed text-(--beigeCustom) font-semibold">
+                If you made it here, I think we should talk
               </p>
               <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
                 <a
