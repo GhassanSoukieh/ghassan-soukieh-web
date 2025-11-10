@@ -75,6 +75,25 @@ const projects: Project[] = [
       "Animations and interactive elements to enhance user engagement",
     ],
   },
+  {
+    title: "FlexiCharge",
+    description: `FlexiCharge is a smart system designed to efficiently manage electric vehicle charging. 
+    It displays available charging stations near the user and allows them to reserve a charging spot in advance. I got the chance to be one of the main developers for the website.`,
+    tech: ["Typescript", "NodeJS", "React", "SQL"],
+    images: [
+      { src: `${image_src}flexi-0.png` },
+      { src: `${image_src}flexi-3.png` },
+      { src: `${image_src}flexi-2.png` },
+    ],
+    link: "flexi-charge",
+    mobilePhotos: false,
+    keyFeatures: [
+      "Real-time availability updates for charging stations",
+      "Reservation system for securing charging spots",
+      "Real-time charging process monitoring",
+      "Booking history and payment management",
+    ],
+  },
 ];
 
 export default projects;
